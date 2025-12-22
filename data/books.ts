@@ -1,0 +1,63 @@
+import { Book } from '@/types';
+
+export const books: Book[] = [
+  {
+    id: 'clean-code',
+    title: 'Clean Code',
+    author: 'Robert C. Martin',
+    status: 'completed',
+    rating: 5,
+    review: 'Essential reading for any serious developer. Transformed how I think about writing maintainable code.',
+    genre: 'Software Engineering',
+    completedDate: '2023-06',
+  },
+  {
+    id: 'designing-data-intensive',
+    title: 'Designing Data-Intensive Applications',
+    author: 'Martin Kleppmann',
+    status: 'reading',
+    genre: 'Systems Design',
+    startedDate: '2024-01',
+  },
+  {
+    id: 'system-design-interview',
+    title: 'System Design Interview',
+    author: 'Alex Xu',
+    status: 'completed',
+    rating: 5,
+    genre: 'Systems Design',
+    completedDate: '2023-12',
+  },
+  {
+    id: 'the-pragmatic-programmer',
+    title: 'The Pragmatic Programmer',
+    author: 'Andrew Hunt, David Thomas',
+    status: 'completed',
+    rating: 5,
+    review: 'A timeless guide to becoming a better programmer. Full of practical wisdom.',
+    genre: 'Software Engineering',
+    completedDate: '2022-08',
+  },
+  {
+    id: 'refactoring',
+    title: 'Refactoring',
+    author: 'Martin Fowler',
+    status: 'want-to-read',
+    genre: 'Software Engineering',
+  },
+  {
+    id: 'architecture-patterns',
+    title: 'Architecture Patterns with Python',
+    author: 'Harry Percival, Bob Gregory',
+    status: 'want-to-read',
+    genre: 'Software Architecture',
+  },
+  {
+    id: 'mobile-app-architecture',
+    title: 'Mobile App Architecture',
+    author: 'Chris Stewart',
+    status: 'reading',
+    genre: 'Mobile Development',
+    startedDate: '2024-10',
+  },
+];
