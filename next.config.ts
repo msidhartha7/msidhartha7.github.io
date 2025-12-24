@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -9,6 +10,7 @@ const nextConfig: NextConfig = {
         hostname: 'komarev.com',
       },
     ],
+    unoptimized: true, // Required for static export
   },
   compress: true,
   poweredByHeader: false,

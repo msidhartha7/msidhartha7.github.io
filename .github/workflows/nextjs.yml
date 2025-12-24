@@ -2,7 +2,7 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ['master']
+    branches: ['master', 'main']
 
   workflow_dispatch:
 
@@ -22,13 +22,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: 10.8.0
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -46,8 +48,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
 
       - name: Restore Next.js cache
         uses: actions/cache@v4
